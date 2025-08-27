@@ -80,3 +80,15 @@ Config.Debug = true -- Enables debug logging in the F8 console
 [APU - Animation & Prop Utility (Case you are the goat)](https://github.com/playingintraffic/apu)<br>
 [M_Walkingstick (I used the prop image used by them)](https://github.com/marcinhuu/m-Walkingstick)
 
+
+---
+## FiveM Database Seal Of Approval 
+
+
+### Solaire As a creator has been awarded the 5DB Seal of Approval. 
+
+[Check their Seal Of Approval Out](https://fivemdb.net/soa/solaire)
+
+<a href="https://fivemdb.net/soa/solaire">
+  <img width="240" height="240" alt="2" src="https://zwrks.com/cdn/FiveMDB/soa.png" />
+</a>
