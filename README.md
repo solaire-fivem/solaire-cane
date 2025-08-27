@@ -4,6 +4,7 @@ A lightweight FiveM script that allows players to use a cane item with custom wa
 
 <img width="1920" height="1080" alt="Preview" src="https://github.com/user-attachments/assets/55cd92a1-2eda-4ceb-8df7-44b38e57b5f7" />
 
+[Installation Video](https://youtu.be/8K40l1eKbh8?feature=shared)
 ## Features
 - Equip and unequip a cane item with custom walk style
 - Cane model attachment and animation
