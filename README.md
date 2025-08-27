@@ -1,8 +1,8 @@
-# Solaire Cane
+# Solaire HUD
 
 A lightweight FiveM script that allows players to use a cane item with custom walk style, animations, and notifications. Supports QBCore and QBox frameworks, and multiple notification systems. <br>
 
-<img width="1920" height="1080" alt="Preview" src="https://github.com/user-attachments/assets/6b6fd674-e99f-4884-8c45-cc61220855f5" />
+<img width="1920" height="1080" alt="Preview" src="https://github.com/user-attachments/assets/55cd92a1-2eda-4ceb-8df7-44b38e57b5f7" />
 
 ## Features
 - Equip and unequip a cane item with custom walk style
