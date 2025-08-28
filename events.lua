@@ -1,8 +1,8 @@
-RegisterNetEvent('solaire-cane:client:toggleCane', function()
+RegisterNetEvent('solaire-cane:client:toggleCane', function(itemName)
     if IsCaneEquipped() then
         RemoveCane()
     else
-        EquipCane()
+        EquipCane(itemName)
     end
 end)
 
@@ -11,11 +11,5 @@ AddEventHandler('onResourceStop', function(resourceName)
         if IsCaneEquipped() then
             RemoveCane()
         end
-    end
-end)
-
-AddEventHandler('playerDropped', function()
-    if IsCaneEquipped() then
-        RemoveCane()
     end
 end)

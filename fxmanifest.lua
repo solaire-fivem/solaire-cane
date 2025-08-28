@@ -12,6 +12,7 @@ game "gta5"
 shared_script "config.lua"
 
 client_scripts {
+  "bridge/framework/qb/core.lua",
   "functions.lua",
   "events.lua",
   "bridge/framework/qb/client.lua",
@@ -20,6 +21,15 @@ client_scripts {
 }
 
 server_scripts {
+  "bridge/framework/qb/core.lua",
   "bridge/framework/qb/server.lua",
   "bridge/framework/qbx/server.lua",
 }
+
+files {
+    'stream/solaire_walking_stick.ytd',
+    'stream/solaire_walking_stick.ytyp',
+    'stream/prop_solaire_walking_stick.ydr'
+}
+
+data_file 'DLC_ITYP_REQUEST' 'stream/solaire_walking_stick.ytyp'

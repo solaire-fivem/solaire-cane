@@ -20,25 +20,44 @@ A lightweight FiveM script that allows players to use a cane item with custom wa
 ## Installation
 1. Download or clone this repository into your FiveM resources folder.
 2. Add the cane item to either qb-inventory or ox_inventory:
-### qb-inventory:
+#### qb-inventory:
+1. Paste the code below in your qb-core/shared/items.lua to create the two cane items
 ```lua
-cane  = {['name'] = 'cane',                                   ['label'] = 'Walking Cane',                 ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'cane.png',                             ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = 'A walking cane to help with mobility' },
+-- Solaire Cane
+cane                                    = {['name'] = 'cane',                                   ['label'] = 'Lester\'s Cane',               ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'cane.png',                                      ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = 'Give lester his cane back you animal!' },
+walking_stick                           = {['name'] = 'walking_stick',                          ['label'] = 'Walking Stick',                ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'walking_stick.png',                             ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = "For when you want to look wise, threaten pigeons, or just poke things you shouldn't" },
 ```
-### ox_inventory:
+2. Add the images in the `inventory-images` folder into `qb-inventory/html/images`
+
+#### ox_inventory:
+1. Paste the code below in your `ox_inventory/data/items.lua` to create the two cane items
 ```lua
+-- Solaire Cane
 ["cane"] = {
-    label = "Walking Cane",
+    label = "Lester's Cane",
     weight = 500,
     stack = true,
     close = false,
-    description = "A walking cane to help with mobility",
+    description = "Give lester his cane back you animal!",
     client = {
         image = "cane.png",
     }
 },
+["walking_stick"] = {
+    label = "Walking Stick",
+    weight = 500,
+    stack = true,
+    close = false,
+    description = "For when you want to look wise, threaten pigeons, or just poke things you shouldn't",
+    client = {
+        image = "walking_stick.png",
+    }
+},
 ```
-4. Add `ensure solaire-cane` to your server.cfg.
-5. Configure it to match your server's framework and notification system
+2. Add the images in the `inventory-images` folder into `ox_inventory/web/images`
+
+3. Add `ensure solaire-cane` to your server.cfg.
+4. Configure the resource to match your server's framework and notification system
 
 ## Configuration
 Edit `config.lua` to set your framework, notification system, cane item name, model, walk style, and other options:
@@ -47,27 +66,18 @@ Config = {}
 
 -- Framework & Notify
 Config.Framework = "qb" -- Currently supported frameworks, ["qb", "qbx"]
-Config.NotificationSystem = "qb" -- Currently supported notify systems, ["qb", "qbx", "ox_lib", "okok"]
+Config.NotificationSystem = "ox_lib" -- Currently supported notify systems, ["qb", "qbx", "ox_lib", "okok"]
 
 -- Cane settings
-Config.CaneItem = "cane"
-Config.CaneModel = "prop_cs_walking_stick"
+Config.CaneItems = {"cane", "walking_stick"} -- Cane items
 Config.WalkStyle = "move_heist_lester"
 
 -- Animation settings
 Config.AttachmentBone = 57005
-Config.AttachmentOffset = {
-    x = 0.15,
-    y = 0.0,
-    z = -0.02,
-    xRotation = 0.0,
-    yRotation = -90.0,
-    zRotation = 0.0
-}
 Config.TransitionSpeed = 0.7 -- The time in seconds it takes to transition between walk styles
 
 -- Miscellaneous
-Config.Debug = true -- Enables debug logging in the F8 console
+Config.Debug = false -- Enables debug logging in the F8 console
 ```
 
 ## Usage
@@ -78,5 +88,5 @@ Config.Debug = true -- Enables debug logging in the F8 console
 
 ## Attributions
 [APU - Animation & Prop Utility (Case you are the goat)](https://github.com/playingintraffic/apu)<br>
-[M_Walkingstick (I used the prop image used by them)](https://github.com/marcinhuu/m-Walkingstick)
-
+[MrNewb - Thank you for the advice](https://github.com/MrNewb)
+[Yibtag - The legend who made the custom prop](https://github.com/Yibtag)
