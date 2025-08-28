@@ -2,7 +2,7 @@ fx_version "cerulean"
 
 description "A simple script that allows you to use a cane"
 author "Solaire"
-version '1.0.0'
+version '1.1.0'
 repository 'https://github.com/solaire-fivem/solaire-cane'
 
 lua54 'yes'
