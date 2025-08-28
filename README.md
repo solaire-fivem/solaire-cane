@@ -88,5 +88,5 @@ Config.Debug = false -- Enables debug logging in the F8 console
 
 ## Attributions
 [APU - Animation & Prop Utility (Case you are the goat)](https://github.com/playingintraffic/apu)<br>
-[MrNewb - Thank you for the advice](https://github.com/MrNewb)
+[MrNewb - Thank you for the advice](https://github.com/MrNewb)<br>
 [Yibtag - The legend who made the custom prop](https://github.com/Yibtag)
