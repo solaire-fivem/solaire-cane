@@ -5,6 +5,5 @@ if Config.Debug then
 end
 
 function ShowNotification(message, type)
-    -- Use QBox notification export as per docs
-    exports['qbx_core']:Notify(message, type or 'info', 5000)
+    exports.qbx_core:Notify(message, type or 'info', 3000)
 end

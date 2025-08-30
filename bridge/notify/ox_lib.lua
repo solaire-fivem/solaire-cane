@@ -5,8 +5,7 @@ if Config.Debug then
 end
 
 function ShowNotification(message, type)
-	-- ox_lib notify types: "success", "info", "error"
-	exports["ox_lib"]:notify({
+	exports.ox_lib:notify({
 		description = message,
 		type = type or "info"
 	})

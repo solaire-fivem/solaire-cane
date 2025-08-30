@@ -7,9 +7,7 @@ RegisterNetEvent('solaire-cane:client:toggleCane', function(itemName)
 end)
 
 AddEventHandler('onResourceStop', function(resourceName)
-    if GetCurrentResourceName() == resourceName then
-        if IsCaneEquipped() then
-            RemoveCane()
-        end
+    if GetCurrentResourceName() == resourceName and IsCaneEquipped() then
+        RemoveCane()
     end
 end)

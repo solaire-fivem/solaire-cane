@@ -5,7 +5,5 @@ if Config.Debug then
 end
 
 function ShowNotification(message, type)
-    local title = "Notification"
-    local duration = 5000 -- duration in ms
-    exports["okokNotify"]:Alert(title, message, duration, type or "info")
+    exports.okokNotify:Alert("Notification", message, 3000, type)
 end

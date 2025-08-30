@@ -4,11 +4,14 @@ local isUsingCane = false
 local currentCaneItem = nil
 
 --- @return nil
+--- @param itemName string
+--- @description Equips the cane and starts a thread to check for any status changes
 function EquipCane(itemName)
     if IsCaneEquipped() then return end
     
     local ped = PlayerPedId()
     if IsPedInAnyVehicle(ped, false) then return ShowNotification("You can't equip a cane in a vehicle!", "error") end
+
     if not itemName then return ShowNotification("No cane item specified!", "error") end
 
     currentCaneItem = itemName
@@ -49,6 +52,7 @@ function EquipCane(itemName)
 end
 
 --- @return nil
+--- @description Removes the cane and resets the player's walk style
 function RemoveCane()
     if not IsCaneEquipped() then return end
 
@@ -74,6 +78,7 @@ function RemoveCane()
 end
 
 --- @return nil
+--- @description Checks which cane object the player is using and then attaches it to the players hand
 function AttachCane()
     local ped = PlayerPedId()
     
@@ -125,7 +130,7 @@ function AttachCane()
 end
 
 --- @return boolean
---- @description Checks if the player is currently using a cane.
+--- @description Checks if the player is currently using a cane
 function IsCaneEquipped()
 	return isUsingCane
 end
