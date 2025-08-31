@@ -28,8 +28,9 @@
 1. Paste the code below in your `qb-core/shared/items.lua` to create the two cane items
 ```lua
 -- Solaire Cane
-cane                                    = {['name'] = 'cane',                                   ['label'] = 'Lester\'s Cane',               ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'cane.png',                                      ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = 'Give lester his cane back you animal!' },
-walking_stick                           = {['name'] = 'walking_stick',                          ['label'] = 'Walking Stick',                ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'walking_stick.png',                             ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = "For when you want to look wise, threaten pigeons, or just poke things you shouldn't" },
+cane                                    = {['name'] = 'cane',                                   ['label'] = 'Lester\'s Cane',               ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'cane.png',                             ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = "Give lester his cane back you animal!" },
+walking_stick                           = {['name'] = 'walking_stick',                          ['label'] = 'Walking Stick',                ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'walking_stick.png',                    ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = "For when you want to look wise, threaten pigeons, or just poke things you shouldn't" },
+staff                                   = {['name'] = 'staff',                                  ['label'] = 'Staff',                        ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'staff.png',                            ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = "Stolen from the great wizard yibtag" },
 ```
 2. Add the images in the `inventory-images` folder into `qb-inventory/html/images`
 
@@ -55,6 +56,16 @@ walking_stick                           = {['name'] = 'walking_stick',          
     description = "For when you want to look wise, threaten pigeons, or just poke things you shouldn't",
     client = {
         image = "walking_stick.png",
+    }
+},
+["staff"] = {
+    label = "Staff",
+    weight = 500,
+    stack = true,
+    close = false,
+    description = "A sturdy staff for support and style",
+    client = {
+        image = "staff.png",
     }
 },
 ```

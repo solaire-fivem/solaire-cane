@@ -31,9 +31,9 @@ server_scripts {
 }
 
 files {
-    'stream/solaire_walking_stick.ytd',
-    'stream/solaire_walking_stick.ytyp',
-    'stream/prop_solaire_walking_stick.ydr'
+    'stream/solaire_canes.ytd',
+    'stream/prop_solaire_walking_stick.ydr',
+    'stream/prop_solaire_staff.ydr'
 }
 
-data_file 'DLC_ITYP_REQUEST' 'stream/solaire_walking_stick.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/solaire_canes.ytyp'

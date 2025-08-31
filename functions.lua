@@ -126,6 +126,25 @@ function AttachCane()
             true, true, false, true, 1, true
         )
         SetModelAsNoLongerNeeded(model)
+    elseif currentCaneItem == "staff" then
+        local model = GetHashKey("prop_solaire_staff")
+        RequestModel(model)
+        while not HasModelLoaded(model) do
+            Wait(10)
+        end
+        caneObject = CreateObject(model, 0.0, 0.0, 0.0, true, true, true)
+        AttachEntityToEntity(
+            caneObject,
+            ped,
+            GetPedBoneIndex(ped, Config.AttachmentBone),
+            0.05,   -- x
+            0.01,   -- y
+            -0.03,  -- z
+            0.0,    -- xRotation
+            -80.0,  -- yRotation
+            140.0,  -- zRotation
+            true, true, false, true, 1, true
+        )
     end
 end
 
