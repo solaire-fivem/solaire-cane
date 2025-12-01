@@ -87,7 +87,7 @@ function AttachCane()
     end
     
     if currentCaneItem == "cane" then
-        local model = GetHashKey("prop_cs_walking_stick")
+        local model = `prop_cs_walking_stick`
         RequestModel(model)
         while not HasModelLoaded(model) do
             Wait(10)
@@ -107,7 +107,7 @@ function AttachCane()
         )
         SetModelAsNoLongerNeeded(model)
     elseif currentCaneItem == "walking_stick" then
-        local model = GetHashKey("prop_solaire_walking_stick")
+        local model = `prop_solaire_walking_stick`
         RequestModel(model)
         while not HasModelLoaded(model) do
             Wait(10)
@@ -127,7 +127,7 @@ function AttachCane()
         )
         SetModelAsNoLongerNeeded(model)
     elseif currentCaneItem == "staff" then
-        local model = GetHashKey("prop_solaire_staff")
+        local model = `prop_solaire_staff`
         RequestModel(model)
         while not HasModelLoaded(model) do
             Wait(10)
@@ -145,6 +145,27 @@ function AttachCane()
             140.0,  -- zRotation
             true, true, false, true, 1, true
         )
+    elseif currentCaneItem == "candy_cane" then
+        local model = `prop_solaire_candy_cane`
+        RequestModel(model)
+        while not HasModelLoaded(model) do
+            Wait(10)
+        end
+        caneObject = CreateObject(model, 0.0, 0.0, 0.0, true, true, true)
+        AttachEntityToEntity(
+            caneObject,
+            ped,
+            GetPedBoneIndex(ped, Config.AttachmentBone),
+            0.14,   -- x
+            0.05,   -- y
+            0.0,    -- z
+            0.0,    -- xRotation
+            -90.0,  -- yRotation
+            160.0,  -- zRotation
+            true, true, false, true, 1, true
+        )
+    else
+        print("Unknown cane item" .. tostring(currentCaneItem) .. "please ensure that you have added the cane item name to the Config.CaneItems table in the config.lua")
     end
 end
 

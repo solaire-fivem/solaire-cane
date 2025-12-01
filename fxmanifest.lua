@@ -33,7 +33,8 @@ server_scripts {
 files {
     'stream/solaire_canes.ytd',
     'stream/prop_solaire_walking_stick.ydr',
-    'stream/prop_solaire_staff.ydr'
+    'stream/prop_solaire_staff.ydr',
+    'stream/prop_solaire_candy_cane.ydr'
 }
 
 data_file 'DLC_ITYP_REQUEST' 'stream/solaire_canes.ytyp'
