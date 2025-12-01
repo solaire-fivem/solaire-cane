@@ -25,7 +25,7 @@
 
 ## Inventory Specific Instructions
 ### qb-inventory:
-1. Paste the code below in your `qb-core/shared/items.lua` to create the two cane items
+1. Paste the code below in your `qb-core/shared/items.lua` to create the cane items
 ```lua
 -- Solaire Cane
 cane                                    = {['name'] = 'cane',                                   ['label'] = 'Lester\'s Cane',               ['weight'] = 500,       ['type'] = 'item',      ['image'] = 'cane.png',                             ['unique'] = false, ['useable'] = true,     ['shouldClose'] = false,   ['combinable'] = nil,     ['description'] = "Give lester his cane back you animal!" },
@@ -36,7 +36,7 @@ candy_cane                              = {['name'] = 'candy_cane',             
 2. Add the images in the `inventory-images` folder into `qb-inventory/html/images`
 
 ### ox_inventory:
-1. Paste the code below in your `ox_inventory/data/items.lua` to create the two cane items
+1. Paste the code below in your `ox_inventory/data/items.lua` to create the cane items
 ```lua
 -- Solaire Cane
 ["cane"] = {
