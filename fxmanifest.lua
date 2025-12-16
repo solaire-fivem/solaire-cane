@@ -37,4 +37,9 @@ files {
     'stream/prop_solaire_candy_cane.ydr'
 }
 
+escrow_ignore {
+  'config.lua',
+  'functions.lua',
+}
+
 data_file 'DLC_ITYP_REQUEST' 'stream/solaire_canes.ytyp'
